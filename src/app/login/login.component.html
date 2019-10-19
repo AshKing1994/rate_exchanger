@@ -1,0 +1,22 @@
+<div class="col-12 mt-4 mb-2">
+    <div class="col-12 col-lg-4 col-sm-6 col-md-4 offset-lg-4 offset-md-4 offset-sm-3">
+        <div class="text-center">
+            <h3 class="text-primary">Login</h3>
+        </div>
+        <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="full-width form-group">
+                <input matInput placeholder="Please enter Email" formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" type="text" name="email">
+                    <mat-error *ngIf="f.email.errors">Please enter valid email address</mat-error>
+                </mat-form-field>
+            <mat-form-field class="full-width form-group">
+                <input matInput placeholder="Please enter password" formControlName="password"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" type="password" name="password">
+                    <mat-error *ngIf="f.password.errors">Please enter more than 6 characters</mat-error>
+                </mat-form-field>
+            <div class="full-width">
+                <button type="submit" class="btn btn-purple btn-block ">Login</button>
+            </div>
+        </form>
+        <mat-error *ngIf="errorLogin">{{errorLogin}}</mat-error>
+    </div>

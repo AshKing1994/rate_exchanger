@@ -1,0 +1,11 @@
+mat-icon {
+    color:#929292;
+    font-size: 26px;
+    
+}
+.mat-form-field{
+    width: 100%;
+}
+a{
+    cursor: pointer;
+}
