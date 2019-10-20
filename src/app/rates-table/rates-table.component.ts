@@ -26,7 +26,7 @@ export class RatesTableComponent implements OnInit {
   dataSource: MatTableDataSource<rateData>;
   constructor(private datePipe: DatePipe, private rates: RateService) {
     this.today = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
-    this.yesterday = this.datePipe.transform(new Date(new Date().setDate(new Date().getDate() - 1)), 'yyyy-MM-dd');
+    this.yesterday = this.datePipe.transform(new Date(new Date().setDate(new Date().getDate() - 2)), 'yyyy-MM-dd');
   }
 
 
